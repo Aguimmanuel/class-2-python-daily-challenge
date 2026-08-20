@@ -1,6 +1,9 @@
 DAY 1 OF 62 - Thursday 20 Aug 2026
 
 MARKET BILL CALCULATOR
+Market Bill Calculator — a real-world task using only today's concepts: variables, input(), converting input (int, float), basic arithmetic, and printing. No imports, no tricks.
+Solve it individually, then come together as a group to compare approaches. When you've finished and discussed, tell me "Day 1 done" and I'll update progress-log.txt and hold Day 2 until you ask for it. Good luck! 
+
 
 A trader at Mile 1 Market sells three items: rice, beans and garri. She wants a small program to work out a customer's total bill quickly instead of using a calculator and paper.
 
