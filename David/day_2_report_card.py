@@ -1,6 +1,6 @@
 
 
-student_name = str(input("\nStudent name:\n "))
+student_name = str(input("\nStudent name:\n ")).title()
 mathematics_score = float(input(f"{student_name}'s Mathematics score:\n ")) 
 english_score = float(input(f"{student_name}'s English score:\n "))
 basic_Science_score = float(input(f"{student_name}'s Basic Science score:\n "))
