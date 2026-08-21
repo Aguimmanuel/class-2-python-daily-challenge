@@ -10,7 +10,6 @@ customer_choice_2= float(input("\nHow many Kg of Beans? "))
 print(f"Today's Beans' price is {Price_of_beans_per_kg} per Kg.")
 
 customer_choice_3= float(input("\nHow many Kg of Garri? "))
-
 print(f"Today's Garri price is {Price_of_garri_per_kg} per Kg.")
 
 rice_total = customer_choice_1 * Price_of_rice_per_kg
