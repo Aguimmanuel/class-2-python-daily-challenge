@@ -1,0 +1,10 @@
+PROGRESS LOG - Python Group Daily Challenge
+
+-----------------------------------------------------------
+DAY 1 of 62 - Thursday 20 Aug 2026
+Task: Market Bill Calculator
+Concepts covered: variables, input(), int() and float() conversion, basic arithmetic, f-strings, 2-decimal money format
+Status: DONE - task solved, discussed and submitted
+Members reviewed (9): aguimmanuel, Benjamin_Ntongho, chebem_Eze, David, fawo, golden, piondy, theo, youngbeck
+Coach notes: all 9 got the core logic right. Group takeaways: N symbol on every money line, float() for prices, watch out for copy-paste label bugs.
+-----------------------------------------------------------
