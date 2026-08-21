@@ -1,0 +1,32 @@
+DAY 2 OF 62 - Friday 21 Aug 2026
+
+TERM REPORT AVERAGE
+
+Term Report Average — a real-world task using only today's concepts: variables, input(), converting input (int, float), basic arithmetic, and printing. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A class teacher at a secondary school in Port Harcourt records term scores for Mathematics, English and Basic Science. She needs a small program that takes one student's scores and prints a mini report card.
+
+The program must:
+- Ask for the student's name.
+- Ask for the three subject scores (scores can be decimals, like 82.5).
+- Show a mini report card: the student's name, each subject and score, the total score, and the average score.
+- The total and average must show two decimal places.
+
+Sample run:
+
+Student name: Adaeze
+Mathematics score: 82.5
+English score: 74
+Basic Science score: 91
+
+----- REPORT CARD -----
+Student: Adaeze
+Mathematics: 82.5
+English: 74.0
+Basic Science: 91.0
+TOTAL: 247.50
+AVERAGE: 82.50
+
+Edge cases to handle: a score of 100, a score of 0, scores with decimals, and a student whose three scores are all the same number.
