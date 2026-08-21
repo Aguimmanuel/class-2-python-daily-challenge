@@ -30,3 +30,6 @@ Garri : 3.5 kg x N900  = N3150.00
 TOTAL TO PAY: N10150.00
 
 Edge cases to handle: decimal kg (like 2.5), 0 kg of an item (that item shows N0.00), and big orders (for example 25 kg).
+
+
+
