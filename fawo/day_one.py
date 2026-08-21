@@ -15,7 +15,7 @@ garri_cost = garri_price * garri_kg
 total = rice_cost + beans_cost + garri_cost
 
 # Display bill
-print("\n---------------------- MARKET BILL ------------------------")
+print("\--------------------- MARKET BILL ------------------------")
 print(f"Rice  : {rice_kg:.1f} kg x N{rice_price} = N{rice_cost:.2f}")
 print(f"Beans : {beans_kg:.1f} kg x N{beans_price} = N{beans_cost:.2f}")
 print(f"Garri : {garri_kg:.1f} kg x N{garri_price} = N{garri_cost:.2f}")
