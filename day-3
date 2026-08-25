@@ -1,0 +1,41 @@
+DAY 3 OF 62 - Monday 24 Aug 2026
+
+REPORT CARD GRADER
+
+Report Card Grader — a real-world task using only today's concepts: comparisons (==, !=, <, >, <=, >=), if / elif / else, variables, input(), int() conversion, basic arithmetic, and printing. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+The same class teacher from Friday's report card task is tired of grading by hand. She wants a program that grades one subject score for a student using her school's scale, and tells each student exactly how far they are from the next grade.
+
+Her grading scale:
+
+- 70 to 100: A - Excellent
+- 60 to 69: B - Very Good
+- 50 to 59: C - Good
+- 45 to 49: D - Pass
+- 0 to 44: F - Fail
+
+The program must:
+- Ask for the student's name and one subject score (a whole number).
+- If the score is not a real score (above 100 or below 0), print a clear message and no grade at all.
+- Print one line in this shape: Adaeze scored 73: B (Very Good)
+- Then print how many more marks the student needs to reach the next grade, for example: 7 more marks to reach A. A student on grade A has nothing left to chase, so handle that differently.
+
+Sample run:
+
+Student name: Adaeze
+Score: 73
+
+Adaeze scored 73: B (Very Good)
+7 more marks to reach A
+
+Another run:
+
+Student name: Tunde
+Score: 30
+
+Tunde scored 30: F (Fail)
+15 more marks to reach D
+
+Edge cases to handle: exactly 70, exactly 69, a score of 0, a score of 100, a score of 105, a score of -5, and a student who is already on grade A.
