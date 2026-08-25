@@ -8,3 +8,10 @@ Status: DONE - task solved, discussed and submitted
 Members reviewed (9): aguimmanuel, Benjamin_Ntongho, chebem_Eze, David, fawo, golden, piondy, theo, youngbeck
 Coach notes: all 9 got the core logic right. Group takeaways: N symbol on every money line, float() for prices, watch out for copy-paste label bugs.
 -----------------------------------------------------------
+DAY 2 of 62 - Friday 21 Aug 2026
+Task: Term Report Average
+Concepts covered: variables, input(), float() conversion, basic arithmetic, f-strings, 2-decimal format for total and average
+Status: DONE - task solved, discussed and submitted (7 of 9 reviewed; chebem_Eze and youngbeck to catch up later)
+Members reviewed (7): aguimmanuel, Benjamin_Ntongho, David, fawo, golden, piondy, theo
+Coach notes: all 7 got the total and average logic right, float() on every score and :.2f on TOTAL/AVERAGE. Nice touches: theo used .title() on the name and \n inside f-strings to keep the card compact; aguimmanuel and golden left subject scores as typed, which matches the sample output. Reminder: chebem_Eze and youngbeck still owe Day 2 submissions.
+-----------------------------------------------------------
