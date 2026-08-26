@@ -1,9 +1,9 @@
 student_name = input("Student name: ")
 score = int(input("Score: "))
 
-if score > 100 or score < 0:
+if score < 0 or score > 100:
     print("Enter a valid score.")
-if score >= 70 and score <= 100:
+elif score >= 70 and score <= 100:
     print(f"{student_name} scored {score}: A (Excellent)")
     remaining = 100 - score
     print(f"{remaining} more marks to reach A")
