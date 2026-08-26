@@ -1,0 +1,43 @@
+DAY 5 OF 62 - Wednesday 26 Aug 2026
+
+EMERGENCY ROOM TRIAGE
+
+Emergency Room Triage — a real-world task using only today's concepts: comparisons (==, !=, <, >, <=, >=), if / elif / else, combining conditions with and / or / not, variables, input(), int() and float() conversion, and printing. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A busy hospital in Port Harcourt wants a small program at the ER entrance. A nurse enters each patient's details and the program sorts the patient into a queue level.
+
+The program asks six things: patient's name, age, temperature, chest pain (yes/no), heavy bleeding (yes/no), conscious (yes/no). Answers are typed in lowercase, exactly yes or no. Temperatures can have decimals.
+
+Queue rules, checked in this order:
+
+- RED - treated immediately: patient is not conscious, OR is bleeding heavily, OR has chest pain AND is 50 or older.
+- AMBER - seen within 30 minutes: temperature is 39.0 or higher, OR has chest pain (younger than 50).
+- GREEN - regular queue: everyone else.
+
+The program must print one line in this shape: Ejiro - RED: treated immediately
+
+Sample run 1:
+
+Patient name: Ejiro
+Age: 62
+Temperature: 37.2
+Chest pain (yes/no): yes
+Heavy bleeding (yes/no): no
+Conscious (yes/no): yes
+
+Ejiro - RED: treated immediately
+
+Sample run 2:
+
+Patient name: Saka
+Age: 34
+Temperature: 39.4
+Chest pain (yes/no): no
+Heavy bleeding (yes/no): no
+Conscious (yes/no): yes
+
+Saka - AMBER: seen within 30 minutes
+
+Edge cases to handle: chest pain at exactly age 50 (RED), chest pain at 49 with normal temperature (AMBER), temperature of exactly 39.0 (AMBER), an unconscious patient no matter what else is true (RED), and a patient with nothing wrong at all (GREEN).
