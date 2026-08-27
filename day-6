@@ -1,0 +1,44 @@
+DAY 6 OF 62 - Thursday 27 Aug 2026
+
+SUPERMARKET CHECKOUT DISCOUNT
+
+Supermarket Checkout Discount — a real-world task using only today's concepts: combining conditions with and / or / not, comparisons (==, !=, <, >, <=, >=), if / elif / else, variables, input(), converting input (int, float), basic arithmetic, and printing with 2-decimal money format. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A supermarket in Port Harcourt is running a checkout promo. Their billing program must work out the discount a customer has earned and the final amount they pay.
+
+The program asks three things: the basket total (decimals allowed), whether the customer is a loyalty member (yes/no), and whether today is a promo day (yes/no). Answers are typed in lowercase, exactly yes or no.
+
+The store's discount rules:
+
+- Members always get 10% off.
+- Non-members get 5% off, but only if their basket is 50000 or more.
+- On promo days, any customer who already earned a discount gets an extra 5% on top. A customer with no discount gets nothing extra, promo day or not.
+- Delivery fee: 2500 if the basket is under 20000, free if it is 20000 or more. The fee does not care about membership or discounts.
+
+The program must print four lines: the discount percent, the discount amount in naira, the delivery fee, and the final amount to pay (basket minus discount plus delivery), all money values with two decimal places.
+
+Sample run 1:
+
+Basket total: 32000
+Loyalty member (yes/no): yes
+Promo day (yes/no): yes
+
+DISCOUNT: 15%
+DISCOUNT AMOUNT: N4800.00
+DELIVERY FEE: N0.00
+FINAL TOTAL: N27200.00
+
+Sample run 2:
+
+Basket total: 18500
+Loyalty member (yes/no): no
+Promo day (yes/no): no
+
+DISCOUNT: 0%
+DISCOUNT AMOUNT: N0.00
+DELIVERY FEE: N2500.00
+FINAL TOTAL: N21000.00
+
+Edge cases to handle: a non-member at exactly 50000 on a promo day (10% total), a non-member at 49999 on a promo day (still 0%), a basket at exactly 20000 (free delivery), a member with a small basket on a normal day (10%, pay delivery), and a basket total of exactly 0.
