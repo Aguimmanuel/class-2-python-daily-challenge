@@ -1,0 +1,50 @@
+DAY 7 OF 62 - Friday 28 Aug 2026
+
+NIGHT BUS FARE DESK
+
+Night Bus Fare Desk — a real-world task using only this week's concepts: comparisons (==, !=, <, >, <=, >=), if / elif / else, combining conditions with and / or / not, variables, input(), converting input (int, float), basic arithmetic, and printing with 2-decimal money format. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A transport company runs a night bus from Port Harcourt to Abuja. Their booking desk needs one program that prices a single passenger and prints a receipt.
+
+The base fare is 15000. The program asks five things: passenger's name, age, luggage weight in kg (decimals allowed), student (yes/no), and a promo code (type none if there is no code). The only valid code is HOLIDAY25, typed exactly. Answers yes/no are typed in lowercase, exactly yes or no.
+
+The company's rules:
+
+- A passenger under 10 is not allowed on the night bus at all. Print one line refusing them clearly, and nothing else.
+- Passengers aged 60 or above get 20% off the fare. Seniors cannot use promo codes - if a senior types a code, it is simply ignored.
+- Students get 10% off the fare, and on top of that the promo code gives an extra 5% (so a student with a valid code gets 15% in total).
+- A non-student with the valid promo code gets 5% off.
+- An invalid code (anything other than HOLIDAY25 or none) gets no discount from the code - but it is not an error, the passenger just pays normal fare.
+- Luggage: 20kg or less is free; above 20kg up to and including 40kg costs 2000; above 40kg costs 4000. Luggage fees are never discounted.
+
+The program must print four lines: discount percent, discount amount in naira, luggage fee, and the final total to pay (fare minus discount plus luggage fee), money with two decimal places.
+
+Sample run 1:
+
+Passenger name: Chinedu
+Age: 41
+Luggage weight: 30
+Student (yes/no): no
+Promo code: none
+
+DISCOUNT: 0%
+DISCOUNT AMOUNT: N0.00
+LUGGAGE FEE: N2000.00
+FINAL TOTAL: N17000.00
+
+Sample run 2:
+
+Passenger name: Amara
+Age: 22
+Luggage weight: 18
+Student (yes/no): yes
+Promo code: HOLIDAY25
+
+DISCOUNT: 15%
+DISCOUNT AMOUNT: N2250.00
+LUGGAGE FEE: N0.00
+FINAL TOTAL: N12750.00
+
+Edge cases to handle: a passenger aged exactly 10 (allowed to travel), aged exactly 60 with a promo code typed (20% only, code ignored), a student with an invalid code like WELCOME10 (10% only), luggage at exactly 20kg (free), luggage at exactly 40kg (2000), and a senior with 45kg of luggage (discount applies, 4000 fee does not).
