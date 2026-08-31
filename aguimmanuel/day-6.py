@@ -1,7 +1,7 @@
 basket_total = float(input("Basket total: "))
 is_loyalty_member = input("Loyalty member (yes/no): ").lower()
 promo_day = input("Promo day (yes/no): ").lower()
-
+discount = 0
 
 if is_loyalty_member == "yes" and basket_total > 0:
     discount = 10
