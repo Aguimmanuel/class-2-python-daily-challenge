@@ -46,5 +46,3 @@ if age > 10:
     print(f"FINAL TOTAL: {final_total:.2f}")
 else:
     print("Age not allowed.")
-
-
