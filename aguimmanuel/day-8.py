@@ -36,12 +36,47 @@
 # 10000 (BIG SAVERS: 0, but the biggest payment still prints), a payment of 0 (it counts as a customer), and 
 # two customers tying on the biggest amount.
 
-num_of_customers_who_paid = int(input("Customers paying today: "))
-count = 1
+num_of_paying_customers = int(input("Customers paying today: "))
+count = 1           #initialized count to 1 to begin count from the first customer
+big_savers = 0
+total_collected = 0
 
-while count <= num_of_customers_who_paid:
+while count <= num_of_paying_customers:   # continue taking input until all customers input are entered
     
     customer_name = input(f"Customer {count} name: ")
-    amount_paid = int(input("Amount paid: "))
-    count += 1
+    amount_paid = float(input("Amount paid: "))
+
+    if amount_paid >= 10000:
+        big_savers += 1
+    else:
+        big_savers = 0
+
+    biggest_single_payment = 0
+    if amount_paid > 0:
+        biggest_single_payment = amount_paid
+
+    count += 1              #take the input of all customers
+
+
+
+
     
+
+
+
+    total_collected += amount_paid
+    average_per_customer = total_collected / num_of_paying_customers
+    
+
+
+
+
+
+
+
+
+print(f"TOTAL COLLECTED: {total_collected:.2f}")
+print(f"CUSTOMERS: {num_of_paying_customers} ")
+print(f"BIG SAVERS: {big_savers}")
+print(f"BIGGEST PAYMENT: {biggest_single_payment}")
+print(f"AVERAGE PER CUSTOMER: {average_per_customer:.2f}")
