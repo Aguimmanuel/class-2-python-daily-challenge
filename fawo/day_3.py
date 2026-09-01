@@ -5,8 +5,6 @@ if score < 0 or score > 100:
     print("Enter a valid score.")
 elif score >= 70 and score <= 100:
     print(f"{student_name} scored {score}: A (Excellent)")
-    remaining = 100 - score
-    print(f"{remaining} more marks to reach A")
 elif score >= 60 and score <= 69:
     print(f"{student_name} scored {score}: B (Very good)")
     remaining = 70 - score
