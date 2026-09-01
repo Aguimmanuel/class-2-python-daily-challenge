@@ -25,6 +25,8 @@ if is_adult and not debtor:
     elif is_there_a_guarantor:
         print("DECISION: APPROVED - guarantor covered the income rule")
 elif not is_adult:
-    print("DECISION: DECLINED - you're not yet an Adult'")
+    print("DECISION: DECLINED - you're not yet an Adult")
 elif debtor:
     print("DECISION: DECLINED - unpaid loan with the bank")
+else:
+    print("DECISION: DECLINED - Low income, no guarantor")
