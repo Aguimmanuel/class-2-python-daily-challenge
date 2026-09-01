@@ -15,4 +15,5 @@ elif income >= 80000:
 elif income < 80000 and guarantor == "yes":
     print("DECISION: APPROVED - guarantor covered the income rule")
 else:
-    print("DECISION: DECLINED - income below required threshold and no guarantor")              
+    print("DECISION: DECLINED - income below required threshold and no guarantor")
+                 
