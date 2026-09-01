@@ -9,6 +9,6 @@ conscious = input("Conscious (yes/no): ").lower()
 if conscious == "no" or heavy_bleeding == "yes" or chest_pain == "yes" and age >= 50:
     print(f"{name} - RED - treated immediately")
 elif temp >= 39.0 or chest_pain == "yes" and age < 50:
-    print(f"{name} - AMBER: seen within 30 minutes")
+    print(f"{name} - AMBER - seen within 30 minutes")
 else:
     print(f"{name} - GREEN - regular queue")
