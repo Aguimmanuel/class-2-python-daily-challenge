@@ -28,10 +28,11 @@ elif loyalty_member == "no" and promo_day == "no":
     discount_approved = False
     discount_amount = basket_total * (discount_percent / 100)
     final_total = basket_total - (basket_total * (discount_percent / 100)) + delivery_fee
-    if promo_day == "yes":
+    if promo_day == "yes" and basket_total > 0:
         discount_percent = 10
         discount_amount = basket_total - (basket_total * (discount_percent / 100))
         final_total = basket_total - (basket_total * (discount_percent / 100)) + delivery_fee
+    
 
 print(f"DISCOUNT: {discount_percent}%")
 print(f"DISCOUNT AMOUNT: {discount_amount:.2f}")
