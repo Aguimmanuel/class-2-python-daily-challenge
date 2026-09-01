@@ -16,7 +16,7 @@ elif 50<= score <= 59:
 elif 45<= score <= 49:
     print(f"{name} scored {score}: D (Pass)")
     print(f"{50-score} more marks to reach C")
-elif 0<= score <= 40:
+elif 0<= score <= 44:
     print(f"{name} scored {score}: F (Fail)")
     print(f"{45-score} more marks to reach D")
 else:
