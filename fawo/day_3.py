@@ -1,6 +1,7 @@
 student_name = input("Student name: ")
 score = int(input("Score: "))
 
+
 if score < 0 or score > 100:
     print("Enter a valid score.")
 elif score >= 70 and score <= 100:
