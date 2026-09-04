@@ -1,0 +1,41 @@
+DAY 9 OF 62 - Tuesday 1 Sep 2026
+
+TOLL GATE SHIFT CLOSER
+
+Toll Gate Shift Closer — a real-world task using only today's concepts: while loops, break and continue, counting with variables, comparisons, if / elif / else, variables, input(), basic arithmetic, and printing with 2-decimal money format. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A toll gate on the Port Harcourt–Aba expressway needs a small program for the cashier's desk. The operator logs every vehicle as it passes. Cars pay N500, buses pay N1000. Official vehicles (ambulance, fire service, government convoy) pass free - they count as vehicles passed but bring in no money. When the shift ends, the operator types close and the day's summary prints.
+
+The program keeps asking one question forever until close is typed:
+
+Vehicle (car / bus / official / close):
+
+Rules:
+- car: add N500 to the revenue and count the vehicle.
+- bus: add N1000 to the revenue and count the vehicle.
+- official: print "Official vehicle passed free", count the vehicle, but add nothing to revenue - and go straight back to the question.
+- close: print the summary and stop the program.
+- anything else: print "Unknown vehicle type", count nothing, and go straight back to the question.
+
+The summary is exactly three lines:
+
+VEHICLES PASSED: 4
+OFFICIAL VEHICLES: 1
+REVENUE: N2000.00
+
+Sample run:
+
+Vehicle (car / bus / official / close): car
+Vehicle (car / bus / official / close): official
+Official vehicle passed free
+Vehicle (car / bus / official / close): bus
+Vehicle (car / bus / official / close): car
+Vehicle (car / bus / official / close): close
+
+VEHICLES PASSED: 4
+OFFICIAL VEHICLES: 1
+REVENUE: N2000.00
+
+Edge cases to handle: close typed as the very first entry (zero vehicles, N0.00 - must not crash), official as the very first entry, an unknown type like truck in the middle of a shift (message printed, nothing counted, the loop continues), a shift with only official vehicles (revenue N0.00 but vehicles counted), and a long shift mixing all four entries.
