@@ -1,0 +1,45 @@
+DAY 11 OF 62 - Thursday 3 Sep 2026
+
+CAFETERIA ORDER KIOSK
+
+Cafeteria Order Kiosk — a real-world task using only today's concepts: simple repeating menus, while loops, break, counting with variables, comparisons, if / elif / else, variables, input(), int() conversion, basic arithmetic, and printing with 2-decimal money format. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A cafeteria on Aba Road has a self-service kiosk. The screen shows the menu, the customer types a number, and the kiosk shows the menu again after every choice - until the customer chooses Done. Then it prints the receipt.
+
+The menu:
+
+----- TODAY'S MENU -----
+1. Jollof rice - N1200
+2. Beans porridge - N900
+3. Chilled drink - N400
+4. Done
+
+Rules:
+- Choosing 1, 2 or 3 adds that item to the order (price added, item counted), prints one line like: Jollof rice added - N1200.00 - then shows the menu again.
+- Choosing 4 prints the receipt and stops the program:
+  ITEMS: 2
+  TOTAL: N2100.00
+- Any other number prints "No such option" and shows the menu again.
+- (Assume the customer always types a whole number for the option - typing words is handled later in the course.)
+
+Sample run:
+
+----- TODAY'S MENU -----
+1. Jollof rice - N1200
+2. Beans porridge - N900
+3. Chilled drink - N400
+4. Done
+Choose (1-4): 1
+Jollof rice added - N1200.00
+Choose (1-4): 7
+No such option
+Choose (1-4): 3
+Chilled drink added - N400.00
+Choose (1-4): 4
+
+ITEMS: 2
+TOTAL: N1600.00
+
+Edge cases to handle: Done as the very first choice (0 items, total N0.00), the same item chosen twice, an invalid option in the middle of an order, an order containing all three items, and checking that the printed total always matches the items chosen.
