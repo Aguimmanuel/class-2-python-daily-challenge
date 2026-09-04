@@ -1,0 +1,32 @@
+DAY 10 OF 62 - Wednesday 2 Sep 2026
+
+NIN ENROLMENT DESK
+
+Nin Enrolment Desk — a real-world task using only today's concepts: asking again until input is valid, while loops, comparisons, if / elif / else, variables, input(), and printing. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+An enrolment officer at a NIN centre in Port Harcourt is tired of forms coming back with bad data. Her program must never accept an invalid answer - each question is asked again and again until the answer is valid. Only then does the program move to the next question.
+
+The program asks three questions in order:
+
+1. Age: must be a whole number from 18 to 110. Anything else (like 12 or 150) is asked again. (Assume the age is always typed in digits - words like "twenty" are handled later in the course.)
+2. Means of ID (passport / voter / licence / national): must be exactly one of those four words, typed in lowercase. Anything else is asked again.
+3. Consent to enrol (yes/no): must be exactly yes or no, typed in lowercase. Anything else (YES, Maybe, ok) is asked again.
+
+At the end:
+- If consent is yes, print one line: ENROLLED - age 34, ID voter, consent yes (with the real values).
+- If consent is no, print: ENROLMENT DECLINED - consent not given
+
+Sample run (note the retries):
+
+Age: 16
+Age: 34
+Means of ID (passport / voter / licence / national): ID card
+Means of ID (passport / voter / licence / national): voter
+Consent to enrol (yes/no): maybe
+Consent to enrol (yes/no): yes
+
+ENROLLED - age 34, ID voter, consent yes
+
+Edge cases to handle: age 17 rejected then age 18 accepted, an ID typed with a capital letter like Voter (rejected - exact lowercase words only), consent typed as YES (rejected - lowercase only), consent no after a valid age and ID (the declined line), and every question answered wrongly at least once before it is answered right.
