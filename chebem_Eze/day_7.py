@@ -1,4 +1,4 @@
-""" """
+"""A program that helps price a single passenger for a Night Bus Fare Desk"""
 
 name = input("Passenger name: ")
 age = int(input("Age: "))
