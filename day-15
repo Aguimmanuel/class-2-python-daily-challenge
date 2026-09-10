@@ -1,0 +1,28 @@
+DAY 15 OF 62 - Wednesday 9 Sep 2026
+
+DOUBLING ALLOWANCE DEAL
+
+Doubling Allowance Deal — a real-world task using only today's concepts: for loops, range(), adding up totals inside a loop (running totals), reusing while validation, comparisons, variables, input(), int(), arithmetic, and printing with 2-decimal money format. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A film director on a shoot in Port Harcourt offers a new apprentice an unusual deal for her daily allowance: N50 on day 1, and every day after that the allowance doubles - N100 on day 2, N200 on day 3, and so on. Before the apprentice accepts, she wants to see the full payment plan and the total.
+
+The program must:
+- Ask "Number of days: " and keep asking until the number is at least 1 and at most 20.
+- Print one line per day showing that day's allowance and the running total so far, in this shape: Day 3: N200.00 (total so far: N350.00)
+- After the last day, print: TOTAL FOR 3 DAYS: N350.00 (with the real number of days).
+
+Sample run:
+
+Number of days: 5
+
+Day 1: N50.00 (total so far: N50.00)
+Day 2: N100.00 (total so far: N150.00)
+Day 3: N200.00 (total so far: N350.00)
+Day 4: N400.00 (total so far: N750.00)
+Day 5: N800.00 (total so far: N1550.00)
+
+TOTAL FOR 5 DAYS: N1550.00
+
+Edge cases to handle: a deal of exactly 1 day, an entry of 0 and an entry of 21 for days (both rejected, asked again), a 20-day deal (the numbers get big - make sure they still add up), and checking that each day's allowance is exactly double the previous day's.
