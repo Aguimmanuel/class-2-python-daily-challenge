@@ -1,0 +1,30 @@
+DAY 13 OF 62 - Monday 7 Sep 2026
+
+BOARDING PASS PRINTER
+
+Boarding Pass Printer — a real-world task using only today's concepts: for loops, range(), looping a fixed number of times, reusing input(), while validation, comparisons, if / elif / else, variables, and printing. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A small airline runs an early-morning shuttle from Port Harcourt to Lagos with 30 seats. At the check-in desk, the agent types how many passengers are on the manifest and the counter printer produces one boarding pass line per passenger, with seats assigned in order starting from Seat 1.
+
+The program must:
+- Ask "Passengers on manifest: " and keep asking until the number is at least 1 and at most 30 (reuse your while validation from last week).
+- Then, one passenger at a time in order, ask the passenger's name and immediately print their boarding pass line in this shape: Passenger 1: Adaeze - Seat 1
+- After the last passenger, print: TOTAL PASSENGERS: 3
+- Seats must start from Seat 1, never Seat 0.
+
+Sample run:
+
+Passengers on manifest: 12
+Passengers on manifest: 3
+Passenger 1 name: Adaeze
+Passenger 2 name: Emeka
+Passenger 3 name: Fatima
+
+Passenger 1: Adaeze - Seat 1
+Passenger 2: Emeka - Seat 2
+Passenger 3: Fatima - Seat 3
+TOTAL PASSENGERS: 3
+
+Edge cases to handle: a manifest of exactly 1 (a single pass), a manifest of exactly 30 (a full shuttle), an entry of 0 and an entry of 31 for the manifest (both rejected, asked again), and checking that the seat number of the last passenger equals the manifest size.
