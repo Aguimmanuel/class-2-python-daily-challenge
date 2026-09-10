@@ -1,0 +1,38 @@
+DAY 17 OF 62 - Friday 11 Sep 2026
+
+SAVINGS TARGET TRACKER
+
+Savings Target Tracker — a real-world task using only this week's concepts: for loops, range(), looping a fixed number of times, input() inside a loop, adding up totals inside a loop, counting with variables - plus reusing while validation, comparisons, if / elif / else, variables, input(), float(), arithmetic, and printing with 2-decimal money format. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A tailoring apprentice on Ojoto Street is saving for her own sewing machine. She saves a different amount every week, so she wants a small program that tracks the weeks one by one and tells her at the end whether she hit her target.
+
+The program must:
+- Ask "Saving for how many weeks: " and keep asking until the number is at least 1.
+- Ask "Target amount: " (decimals allowed).
+- Then, for each week in order, ask "Week 1 savings: " (decimals allowed - a 0 week is allowed and still counts as a week), and after each entry print one line in this shape: Week 2: saved N8000.00 (total so far: N15000.00)
+- While looping, also count the STRONG WEEKS - weeks where she saved 10000 or more.
+- After the last week, print exactly three lines:
+  TOTAL SAVED: N20500.50
+  STRONG WEEKS: 1
+  GOAL REACHED - extra N500.50   (if the total is at or above the target)
+  or
+  SHORTFALL: N4999.50   (if the total is below the target)
+
+Sample run:
+
+Saving for how many weeks: 3
+Target amount: 20000
+Week 1 savings: 8000
+Week 1: saved N8000.00 (total so far: N8000.00)
+Week 2 savings: 0
+Week 2: saved N0.00 (total so far: N8000.00)
+Week 3 savings: 12500.50
+Week 3: saved N12500.50 (total so far: N20500.50)
+
+TOTAL SAVED: N20500.50
+STRONG WEEKS: 1
+GOAL REACHED - extra N500.50
+
+Edge cases to handle: a single week (the only week decides everything), an entry of 0 weeks (rejected, asked again), a final total exactly equal to the target (GOAL REACHED, extra N0.00), a zero in the middle of the schedule, every week a strong week, and no week a strong week.
