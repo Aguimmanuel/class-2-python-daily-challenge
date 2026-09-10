@@ -1,0 +1,31 @@
+DAY 16 OF 62 - Thursday 10 Sep 2026
+
+WEDDING SOUVENIR CLEARANCE
+
+Wedding Souvenir Clearance — a real-world task using only today's concepts: making range() count down, changing a variable inside a loop (a running difference), reusing break, comparisons, if / elif / else, variables, input(), float(), arithmetic, and printing with 2-decimal money format. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A couple is clearing their leftover wedding souvenirs at a shop in Rumuokoro. The price starts high and drops by a fixed amount every day, but it must never go below a floor price - once it touches the floor, the clearance is over. They want a program that prints the full price schedule before they agree.
+
+The program asks three things: the starting price, the daily drop, and the floor price (decimals allowed for all three). Then it prints the schedule:
+
+- First line: Today: N8000.00 (the starting price).
+- Then one line per day: Day 1: N7500.00, Day 2: N7000.00, ... each day's price is the previous price minus the daily drop.
+- The very moment a price would fall BELOW the floor, the price stays at the floor instead, that line prints, followed by: Floor price reached - clearance over - and the program stops.
+- For safety, never print more than 30 days - if the floor has not been reached by then, print: Still above floor after 30 days (with the day-30 price shown on its line as usual).
+
+Sample run (start 8000, drop 500, floor 6000):
+
+Starting price: 8000
+Daily drop: 500
+Floor price: 6000
+
+Today: N8000.00
+Day 1: N7500.00
+Day 2: N7000.00
+Day 3: N6500.00
+Day 4: N6000.00
+Floor price reached - clearance over
+
+Edge cases to handle: a daily drop that lands exactly on the floor (the floor line prints normally, then the clearance-over line), a huge drop that would jump straight past the floor (the first day clamps to the floor and stops), a floor equal to the starting price (Today line, then floor line, then over), and a tiny drop like N10 with floor far away (the 30-day safety limit kicks in).
