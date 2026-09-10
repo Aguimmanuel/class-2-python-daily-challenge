@@ -1,0 +1,29 @@
+DAY 14 OF 62 - Tuesday 8 Sep 2026
+
+SIGNWRITER'S QUOTE
+
+Signwriter's Quote — a real-world task using only today's concepts: for loops, looping over text one character at a time, counting with variables inside a loop, reusing comparisons, if / elif / else, variables, input(), arithmetic, and printing with 2-decimal money format. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A signwriter on Trans Amadi Road quotes for shop signboards by character: N150 for every character painted, but spaces are free - they cost nothing to paint. Before he starts work he runs the phrase through a small program that walks through the text character by character and prices the job.
+
+The program must:
+- Ask for the signboard phrase.
+- Walk through the text one character at a time, counting: the total characters, and how many of them are spaces.
+- Print exactly three lines:
+  CHARACTERS: 9 (2 spaces)
+  BILLABLE: 7
+  QUOTE: N1050.00
+- Billable characters = total characters minus spaces. Quote = billable x 150, in naira with two decimal places.
+- Do NOT use len() for this - the whole point is counting the characters yourself inside the loop.
+
+Sample run:
+
+Signboard phrase: Ada Moore
+
+CHARACTERS: 9 (1 space)
+BILLABLE: 8
+QUOTE: N1200.00
+
+Edge cases to handle: an empty phrase (just Enter - zero characters, quote N0.00), a phrase made only of spaces (billable 0, quote N0.00), a single-character phrase, and a long phrase with no spaces at all.
