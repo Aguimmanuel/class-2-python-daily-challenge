@@ -17,3 +17,4 @@ if consent == "yes":
     print(f"ENROLLED - age {age}, ID {id}, consent {consent}")
 else:
     print("ENROLLMENT DECLINED - consent not given")
+    
