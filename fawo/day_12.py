@@ -1,0 +1,93 @@
+# DAY 12 OF 62 - Friday 4 Sep 2026
+
+# SHOPKEEPER END-OF-DAY TERMINAL
+
+# Shopkeeper End-Of-Day Terminal — a real-world task using only this week's concepts: repeating menus, while loops, break and continue, asking again until input is valid, counting with variables - plus comparisons, if / elif / else, variables, input(), float() conversion, arithmetic, and printing with 2-decimal money format. No imports, no tricks.
+
+# Solve it individually, then come together as a group to compare approaches. Good luck!
+
+# A shopkeeper in Rumuokoro wants one terminal program on her counter for the whole trading day. It shows a menu, she picks an option, the menu comes back - until she closes for the day.
+
+# The menu:
+
+# ----- SALES TERMINAL -----
+# 1. Record a sale
+# 2. Today so far
+# 3. Close for the day
+
+# Rules:
+# - Option 1: ask "money_collected: ". A sale must be above zero - reject 0 or a negative number with "Sale must be above zero" and return to the menu WITHOUT counting it. Amounts can have decimals. (Assume amounts are always typed in digits - words are handled later in the course.)
+# - Option 2: print the running figures, exactly three lines:
+#   SALES SO FAR: 1
+#   MONEY SO FAR: N2500.00
+#   BIGGEST SALE: N2500.00
+#   If there are no sales yet, print "No sales yet today" instead of the three lines.
+# - Option 3: ask "Type CLOSE to confirm: ". Anything other than exactly CLOSE prints "Close cancelled - back to the terminal" and returns to the menu. Typing CLOSE prints the final summary and stops the program:
+#   SALES TODAY: 1
+#   MONEY COLLECTED: N2500.00
+#   BIGGEST SALE: N2500.00
+#   AVERAGE SALE: N2500.00
+
+# Sample run:
+
+# Choose (1/2/3): 1
+# money_collected: 2500
+# Sale recorded
+# Choose (1/2/3): 1
+# money_collected: -400
+# Sale must be above zero
+# Choose (1/2/3): 3
+# Type CLOSE to confirm: close
+# Close cancelled - back to the terminal
+# Choose (1/2/3): 3
+# Type CLOSE to confirm: CLOSE
+
+# SALES TODAY: 1
+# MONEY COLLECTED: N2500.00
+# BIGGEST SALE: N2500.00
+# AVERAGE SALE: N2500.00
+
+# Edge cases to handle: a sale of exactly 0 (rejected), a decimal sale like 750.50 (counted), a mistyped confirmation like close in lowercase (cancelled, back to the menu), several sales where the biggest one came first (not last), and closing a day with ZERO sales - the final summary must still print, with N0.00 everywhere, and must not crash.
+
+sales_today = 0
+total_sale = 0
+biggest_sale = 0
+
+while True:
+    print("----- SALES TERMINAL -----")
+    print("1. Record a sale")
+    print("2. Today so far")
+    print("3. Close for the day")
+
+    choice = int(input("Choose (1/2/3): "))
+
+    
+    if choice == 1:
+        money_collected = int(input("money_collected: "))
+        if money_collected >= 1:
+            print("Sale recorded")
+            sales_today +=1
+        else:
+            print("Sale must be above Zero")
+    if money_collected > biggest_sale:
+        biggest_sale = money_collected
+        total_sale +=money_collected
+        average_sale = total_sale/sales_today
+        continue
+
+    if choice == 2:
+        print(f"SALES SO FAR: {sales_today}")
+        print(f"MONEY SO FAR: {total_sale:.2f}")
+        print(f"BIGGEST SALE: {biggest_sale:.2f}")
+
+    elif choice == 3:
+        close = input("Type CLOSE to confirm: ")
+        if close == "CLOSE":
+            print(f"SALES TODAY:{sales_today} ")
+            print(f"MONEY COLLECTED: {total_sale:.2f}")
+            print(f"BIGGEST SALE: {biggest_sale:.2f}")
+            print(f"AVERAGE SALE: {average_sale:.2f}")
+            break
+        else:
+            print("Close cancelled - back to the terminal")
+    
