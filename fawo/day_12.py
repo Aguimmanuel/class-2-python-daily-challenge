@@ -1,12 +1,12 @@
 sales_today, total_sale, biggest_sale, average_sale = 0, 0, 0, 0
 
-while True:
-    print("----- SALES TERMINAL -----")
-    print("1. Record a sale")
-    print("2. Today so far")
-    print("3. Close for the day")
+print("----- SALES TERMINAL -----")
+print("1. Record a sale")
+print("2. Today so far")
+print("3. Close for the day")
 
-    choice = int(input("Choose (1/2/3): "))
+while True:
+    choice = int(input("\nChoose (1/2/3): "))
    
     if choice == 1:
         money_collected = float(input("money_collected: "))
