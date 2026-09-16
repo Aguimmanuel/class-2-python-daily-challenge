@@ -1,7 +1,4 @@
-sales_today = 0
-total_sale = 0
-biggest_sale = 0
-average_sale = 0
+sales_today, total_sale, biggest_sale, average_sale = 0, 0, 0, 0
 
 while True:
     print("----- SALES TERMINAL -----")
@@ -10,8 +7,7 @@ while True:
     print("3. Close for the day")
 
     choice = int(input("Choose (1/2/3): "))
-
-    
+   
     if choice == 1:
         money_collected = float(input("money_collected: "))
         if money_collected >= 1:
