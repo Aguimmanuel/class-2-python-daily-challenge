@@ -1,0 +1,25 @@
+DAY 20 OF 62 - Wednesday 16 Sep 2026
+
+INITIALS ENGRAVER
+
+Initials Engraver — a real-world task using only today's concepts: split(), join(), strip(), replace(), upper(), indexing, looping over text, comparisons, if / else, variables, input(), and printing. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A gift shop in GRA engraves names on wooden boxes. Customers send their names typed every possible wrong way: with underscores instead of spaces, with double spaces, with stray spaces at the ends. Before engraving, the shop cleans the name and works out the initials.
+
+The program must:
+- Ask for the full name as sent by the customer.
+- Clean it: underscores become spaces, extra spacing collapses so words are separated by exactly one space, and no space remains at the start or end.
+- Print the cleaned name in ALL CAPS on one line: ENGRAVING: ADAEZE OBI KAINEBI
+- Print the initials - the first letter of every word, in order, each followed by a dot: INITIALS: A.O.K.
+- Use split() and join() for the cleaning - that is the whole point of today. Build the initials by looping over the cleaned words and taking the first letter of each.
+
+Sample run:
+
+Customer name:  adaeze__obi   kainebi
+
+ENGRAVING: ADAEZE OBI KAINEBI
+INITIALS: A.O.K.
+
+Edge cases to handle: a two-word name, a single word (initials is just one letter and a dot), a name typed with underscores AND double spaces together, a name with spaces at both ends, and a name that was already clean (nothing changes).
