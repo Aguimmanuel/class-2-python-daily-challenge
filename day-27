@@ -1,0 +1,36 @@
+DAY 27 OF 62 - Friday 25 Sep 2026
+
+POS DAY RECONCILIATION
+
+Pos Day Reconciliation — a real-world task using this week's concepts: creating and building lists, append(), looping over a list, sum(), min(), max(), sorted(), len(), counting with variables, while validation, comparisons, and 2-decimal money format. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A POS agent at a junction closes business at 7pm and must reconcile the day's transactions before returning the cash to the shop owner. One program, the full picture.
+
+The program must:
+- Ask "How many sales today: " and keep asking until it is at least 1.
+- Ask each sale amount in order (Sale 1: , Sale 2: ... - decimals allowed) and build them into a list. While collecting, remember WHICH sale number was the biggest - if two sales tie, the FIRST one keeps the crown (same rule as your Day 8 ajo program).
+- Then print exactly six lines:
+  SALES TODAY: 6
+  TOTAL: N41250.00
+  AVERAGE: N6875.00
+  BIGGEST: N15000.00 (sale number 3)
+  ABOVE N5000: 3
+  BEST TO WORST: N15000.00, N9000.00, ... (all sales, biggest first, two decimals, joined with commas)
+
+Sample run:
+
+How many sales today: 3
+Sale 1: 2500
+Sale 2: 15000
+Sale 3: 9000
+
+SALES TODAY: 3
+TOTAL: N26500.00
+AVERAGE: N8833.33
+BIGGEST: N15000.00 (sale number 2)
+ABOVE N5000: 2
+BEST TO WORST: N15000.00, N9000.00, N2500.00
+
+Edge cases to handle: a single sale (it is total, average, biggest and worst all at once), two sales tied for biggest (the earlier sale number wins), every sale below 5000 (ABOVE N5000: 0), decimal sales like 750.50 flowing through every line, and checking BEST TO WORST is truly biggest to smallest.
