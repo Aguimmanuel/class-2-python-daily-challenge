@@ -1,0 +1,37 @@
+DAY 21 OF 62 - Thursday 17 Sep 2026
+
+PASSWORD RULE CHECK
+
+Password Rule Check — a real-world task using only today's concepts: checking with in, for loops, len(), comparisons, if / elif / else, counting with variables, variables, input(), and printing. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A fintech onboarding screen checks how strong a new password is BEFORE accepting it. The checker reports four rules, then gives a verdict.
+
+The four rules:
+1. Length: at least 8 characters.
+2. Special character: contains @ or # somewhere in it.
+3. Digit: contains at least one character from 0123456789 (walk through the password one character at a time with a for loop and check each character with in).
+4. No spaces: a space anywhere fails this rule.
+
+The program asks for the password once and prints exactly five lines:
+
+LENGTH: OK
+SPECIAL: FOUND
+DIGIT: MISSING
+SPACES: NONE FOUND
+VERDICT: WEAK - fix the missing rules
+
+STRONG is printed in the verdict only when all four rules pass. Anything else is WEAK.
+
+Sample run:
+
+Password: ada@2026x
+
+LENGTH: OK
+SPECIAL: FOUND
+DIGIT: FOUND
+SPACES: NONE FOUND
+VERDICT: STRONG - all rules passed
+
+Edge cases to handle: exactly 8 characters (OK), exactly 7 (TOO SHORT), a password with a space in the middle, a password with @ but no digit, a password with a digit but no @ or #, and the empty password (fails everything without crashing).
