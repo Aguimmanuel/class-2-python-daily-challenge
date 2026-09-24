@@ -1,0 +1,39 @@
+DAY 26 OF 62 - Thursday 24 Sep 2026
+
+MARKS SHEET GRADER
+
+Marks Sheet Grader — a real-world task using only today's concepts: looping over a list, counting with variables, sum(), len(), building a list with append(), comparisons, if / elif / else, while validation, and printing. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+Bring back your Day 3 Report Card Grader scale - today the whole class gets graded at once.
+
+- 70 to 100: A - Excellent
+- 60 to 69: B - Very Good
+- 50 to 59: C - Good
+- 45 to 49: D - Pass
+- 0 to 44: F - Fail
+
+The program must:
+- Ask "Scores for how many students: " and keep asking until it is at least 1.
+- Ask for each score in order (Score 1: , Score 2: ...) and collect them into a list. (Assume scores are typed as whole numbers in range.)
+- Then loop over the list and grade each score, printing one line per student: Score 82: B - PASS (D and above is a pass, F is a fail).
+- Count the fails while looping.
+- After the last one, print exactly two lines:
+  CLASS AVERAGE: 61.40
+  FAILED: 1
+
+Sample run:
+
+Scores for how many students: 3
+Score 1: 82
+Score 2: 43
+Score 3: 70
+
+Score 82: B - PASS
+Score 43: F - FAIL
+Score 70: A - PASS
+CLASS AVERAGE: 65.00
+FAILED: 1
+
+Edge cases to handle: a single student, all students failing (FAILED shows everyone, average still prints), all passing, scores of exactly 44 then 45 (F then D - the pass boundary), and exactly 69 then 70 (B then A).
