@@ -1,0 +1,41 @@
+DAY 24 OF 62 - Tuesday 22 Sep 2026
+
+DJ PLAYLIST EDITOR
+
+DJ Playlist Editor — a real-world task using only today's concepts: append(), insert(), remove(), pop(), creating lists, len(), in, repeating menus, while loops, break, comparisons, if / elif / else, variables, input(), and printing. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A DJ is lining up tonight's playlist at a lounge on Аба Road. He wants an editor that shows a menu, does what he picks, and comes back to the menu - until he chooses Done.
+
+The menu:
+
+----- PLAYLIST -----
+1. Add song to end
+2. Add song to top
+3. Remove a song
+4. Play next song
+5. Done
+
+The rules:
+- Option 1: ask the song title, add it to the END of the playlist, print: Added to end: SongTitle
+- Option 2: ask the song title, add it to the TOP of the playlist (position 1), print: Added to top: SongTitle
+- Option 3: ask the title. If it is in the playlist, remove it and print: Removed: SongTitle. If not: Not in the playlist - and back to the menu.
+- Option 4: if the playlist has songs, take the FIRST song off and print: Now playing: SongTitle. If it is empty: Playlist is empty.
+- Option 5: leave the menu and print the final playlist, numbered, one song per line: 1. SongTitle - or Playlist is empty if nothing is left.
+
+Sample run (after this sequence):
+
+Choose (1-5): 2
+Song title: Anthem
+Added to top: Anthem
+Choose (1-5): 1
+Song title: Bounce
+Added to end: Bounce
+Choose (1-5): 4
+Now playing: Anthem
+Choose (1-5): 5
+
+1. Bounce
+
+Edge cases to handle: playing next from an empty playlist, removing a song that was never added, adding to top then to end and checking the order is right, Done straight away on an empty playlist, and removing a song from the middle.
