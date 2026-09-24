@@ -1,0 +1,37 @@
+DAY 25 OF 62 - Wednesday 23 Sep 2026
+
+FUEL PRICE SPY
+
+Fuel Price Spy — a real-world task using only today's concepts: sum(), min(), max(), sorted(), reverse(), append(), looping over a list, join(), building formatted strings, and 2-decimal money format. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A driver running the Port Harcourt - Owerri route passes five filling stations and logs the petrol price at each. Before the next trip he wants the picture at a glance: where it was cheapest, dearest, the average, and the full ranking.
+
+The program must:
+- Ask for exactly five prices, one at a time: Station 1 price: ... Station 5 price: (decimals allowed). Collect them into a list as they come.
+- Then print exactly five lines:
+  STATIONS: 5
+  CHEAPEST: N955.00
+  DEAREST: N1020.00
+  AVERAGE: N986.00
+  CHEAPEST FIRST: N955.00, N970.00, N990.00, N1000.00, N1020.00
+- The CHEAPEST FIRST line shows all five prices ranked from cheapest to dearest, joined into one line with commas. Format every price to two decimals.
+- Also print one advice line: BUY AT THE N955.00 STATION, AVOID THE N1020.00 ONE (the real prices).
+
+Sample run:
+
+Station 1 price: 970
+Station 2 price: 990
+Station 3 price: 955
+Station 4 price: 1020
+Station 5 price: 995
+
+STATIONS: 5
+CHEAPEST: N955.00
+DEAREST: N1020.00
+AVERAGE: N986.00
+CHEAPEST FIRST: N955.00, N970.00, N990.00, N995.00, N1020.00
+BUY AT THE N955.00 STATION, AVOID THE N1020.00 ONE
+
+Edge cases to handle: all five stations the same price (cheapest equals dearest), one station way above the rest, prices with decimals like 955.50, checking the average shows two decimals, and checking the ranking is truly cheapest to dearest.
