@@ -1,0 +1,29 @@
+DAY 18 OF 62 - Monday 14 Sep 2026
+
+PLATE NUMBER DECODER
+
+Plate Number Decoder — a real-world task using only today's concepts: len(), indexing, slicing, while validation, comparisons, if / elif / else, variables, input(), and printing. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A car park attendant at a Port Harcourt mall reads Nigerian number plates all day. A standard plate looks like ABC123DE: three letters, three digits, two letters - exactly 8 characters. The last two letters are the state code. She wants a small program that takes a plate, checks it, and decodes the parts.
+
+The program must:
+- Ask "Enter plate: " and keep asking until the plate is exactly 8 characters (too short or too long is rejected, with the length shown, e.g. "7 characters - plates have 8").
+- Then slice it apart and print:
+  LIVERY: ABC
+  SERIAL: 123
+  STATE: PH - Rivers
+- The state line uses if / elif: PH - Rivers, LA - Lagos, AB - Abia, KN - Kano, anything else - outside our known states.
+
+Sample run:
+
+Enter plate: AB12
+4 characters - plates have 8
+Enter plate: ABC123PH
+
+LIVERY: ABC
+SERIAL: 123
+STATE: PH - Rivers
+
+Edge cases to handle: a plate of exactly 8 (decoded), 7 characters (rejected, asked again), 9 characters (rejected, asked again), an empty entry, a plate ending LA and one ending XY, and checking the serial comes from the middle three characters - not the first or last.
