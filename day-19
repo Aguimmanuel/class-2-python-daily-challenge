@@ -1,0 +1,29 @@
+DAY 19 OF 62 - Tuesday 15 Sep 2026
+
+CONTACT CARD CLEANER
+
+Contact Card Cleaner — a real-world task using only today's concepts: strip(), upper(), replace(), len() checking, while validation, comparisons, if / else, variables, input(), and printing. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A shop owner collects customer details on WhatsApp - and they arrive messy: names padded with spaces, phone numbers typed like 0803 123 4567 or 0803-123-4567. She wants a program that cleans one contact card before saving it.
+
+The program must:
+- Ask for the customer's full name (typed messily, with extra spaces at the sides). Clean it: strip the spaces, then show it in ALL CAPS.
+- Ask for the phone number (it may contain spaces or dashes). Clean it: remove every space and every dash so only digits remain.
+- Print:
+  NAME ON CARD: ADAEZE OBI
+  PHONE ON CARD: 08031234567
+  DIGITS: 11 - GOOD
+- A Nigerian number has exactly 11 digits. If the cleaned number is not 11 digits, print "DIGITS: 9 - CHECK THE NUMBER" instead (the real count).
+
+Sample run (the spaces are part of the test):
+
+Customer name:    adaeze obi   
+Phone number: 0803 123 4567
+
+NAME ON CARD: ADAEZE OBI
+PHONE ON CARD: 08031234567
+DIGITS: 11 - GOOD
+
+Edge cases to handle: a name with spaces only at the start, a phone typed with dashes instead of spaces, a phone with both spaces and dashes, an 11-digit number with no spaces at all (untouched), a 10-digit number (warning line), and a 13-digit number (warning line).
