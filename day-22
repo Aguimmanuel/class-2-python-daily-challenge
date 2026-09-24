@@ -1,0 +1,34 @@
+DAY 22 OF 62 - Friday 18 Sep 2026
+
+ORDER NOTE PARSER
+
+Order Note Parser — a real-world task using this week's concepts: split(), strip(), upper(), len(), in, for loops, continue, accumulating totals, comparisons, if / elif / else, and 2-decimal money format. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A provision store takes orders as short coded notes - one note per product, in the shape:
+
+item:quantity:unit price
+
+for example: golden morn:2:1750
+The owner wants a program that reads exactly 3 notes (use a for loop), prints a receipt line for each good note, and skips bad notes without crashing.
+
+The rules:
+- Split each note on the colon. It must come apart into exactly 3 parts - if not, print "Bad note - skipped" and move on to the next note (continue).
+- Clean the item part: strip spaces, show in ALL CAPS. Quantity is a whole number, unit price can have decimals (assume both are typed in digits).
+- Each good note prints one line: GOLDEN MORN x2 - N3500.00
+- Keep a running grand total of the good lines only.
+- After the three notes: GRAND TOTAL: N7050.00 (good notes only, two decimal places).
+
+Sample run:
+
+Order note: golden morn : 2 : 1750
+GOLDEN MORN x2 - N3500.00
+Order note: Milo
+Bad note - skipped
+Order note::1:500
+Bad note - skipped
+
+GRAND TOTAL: N3500.00
+
+Edge cases to handle: extra spaces around every part (still processed), a note with only 2 parts, a note with an empty item but 3 parts (an item that strips down to nothing is a bad note too), a quantity of 0 (line prints with N0.00 and still counts toward the total), and a decimal unit price like 750.50.
