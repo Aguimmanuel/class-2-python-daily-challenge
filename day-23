@@ -1,0 +1,31 @@
+DAY 23 OF 62 - Monday 21 Sep 2026
+
+CLINIC QUEUE BOARD
+
+Clinic Queue Board — a real-world task using only today's concepts: creating lists, indexing, slicing, len(), in, split(), comparisons, if / else, variables, input(), and printing. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A clinic receptionist keeps the morning queue as one line of names. Her board program turns that line into a list and answers the standard questions in one go.
+
+The program must:
+- Ask for the queue as one line: names separated by a comma and a space, like Adaeze, Bola, Emeka, Fatima. Turn it into a list with split(", ").
+- Print exactly four lines:
+  FIRST: Adaeze
+  LAST: Fatima
+  WAITING: 4
+  NEXT TWO CALLED: Adaeze, Bola
+- Then ask "Search for which patient: ", and print one line: "Adaeze is number 1 in the queue" (their position, counting from 1) or "Bola is not in the queue". Ignore capital letters when matching (compare in lowercase).
+
+Sample run:
+
+Queue line: Adaeze, Bola, Emeka, Fatima
+
+FIRST: Adaeze
+LAST: Fatima
+WAITING: 4
+NEXT TWO CALLED: Adaeze, Bola
+Search for which patient: emeka
+Emeka is number 3 in the queue
+
+Edge cases to handle: a queue of exactly one name (first and last are the same, NEXT TWO shows just the one), a search that matches nobody, a search typed in a different case than the queue line, a queue of exactly two names, and checking positions are counted from 1 - never 0.
