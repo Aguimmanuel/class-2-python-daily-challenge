@@ -1,0 +1,32 @@
+DAY 30 OF 62 - Wednesday 30 Sep 2026
+
+BREAKFAST TALLY
+
+Breakfast Tally — a real-world task using only today's concepts: simple counting with dictionaries, get() or the in check to grow counts, looping over a dictionary, items(), comparisons, if / else, while validation, variables, input(), and printing. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A breakfast vendor at the motor park serves six things: rice, beans, yam, bread, tea, eggs. Customers shout their orders one after another, and her apprentice writes tallies in a book - each item and how many people ordered it. Today that book is a dictionary.
+
+The program must:
+- Ask "How many orders: " and keep asking until it is at least 1.
+- Read the orders one by one, each typed as one word. The FIRST time an item appears it starts counting from 1 - build the tally dictionary as the orders come in.
+- An order that is not on the menu (like pizza) prints "Not on the menu" and does NOT enter the tally.
+- After the last order, print the tally, one line per item in the order the items first appeared: RICE: 3 orders
+- Then the winner: TOP SELLER: rice (3 orders) - if two items tie, the one that reached that count FIRST wins.
+
+Sample run:
+
+How many orders: 5
+Order 1: rice
+Order 2: tea
+Order 3: rice
+Order 4: pizza
+Not on the menu
+Order 5: rice
+
+RICE: 3 orders
+TEA: 1 order
+TOP SELLER: rice (3 orders)
+
+Edge cases to handle: every order the same item (one line in the tally), an order of 1 printing "1 order" not "1 orders", an unknown item mixed in the middle (skipped, counting continues), a tie where the second item reached the count first (it wins), and checking that pizza never appears in the tally.

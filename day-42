@@ -1,0 +1,28 @@
+DAY 42 OF 62 - Friday 16 Oct 2026
+
+STAFF BONUS ROLL-OFF
+
+Staff Bonus Roll-Off — a real-world task using this week's and last week's concepts: functions throughout (def, parameters, return, small jobs), random.randint(), math.ceil(), lists, while loops, counting with variables, comparisons, if / elif / else, variables, input(), int(), arithmetic, and printing with 2-decimal money format. No imports except random and math, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+Two shop attendants, Ada and Emeka, tie on sales every Friday - so the manager settles the weekly bonus with a dice roll-off: best of 3 rounds, two dice each per round, higher total takes the round. The bonus starts at N20000 and grows by N500 for every point of the winner's best round. But the cashier pays only in round hundreds, so the final bonus is rounded UP to the next multiple of 100 with math.ceil().
+
+The program must:
+- Use AT LEAST two functions: one that rolls two dice with random.randint(1, 6) and RETURNS the two faces, and one that takes the two totals of a round and RETURNS the round winner's name (or "tie").
+- Play the rounds in a loop until someone wins 2 rounds (a tied round counts for nobody - keep rolling that round until it isn't a tie).
+- Print each round as it happens: Round 1: Ada 4+6=10, Emeka 3+2=5 - Ada takes it
+- When someone reaches 2 rounds: WINNER: Ada (2 rounds to 1)
+- Best round of the winner = the biggest dice sum they rolled across ALL rounds (ties within their own rounds take the later one).
+- Final bonus: base 20000 + 500 x best round, rounded UP to the next multiple of 100 with math.ceil(): BONUS: N25500.00
+
+Sample run:
+
+Round 1: Ada 4+6=10, Emeka 3+2=5 - Ada takes it
+Round 2: Ada 2+2=4, Emeka 5+6=11 - Emeka takes it
+Round 3: Ada 6+5=11, Emeka 1+3=4 - Ada takes it
+WINNER: Ada (2 rounds to 1)
+BEST ROUND: 11
+BONUS: N25500.00
+
+Edge cases to handle: a tied round (same sum - nobody scores, replay it), a clean 2-0 win (only two rounds printed), the best round coming from a round the winner LOST (it still counts - best ROUND means their best dice sum, even in defeat), a bonus that is already an exact multiple of 100 (ceil must not change it), and running it twice with different results.

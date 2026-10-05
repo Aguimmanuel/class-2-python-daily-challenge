@@ -1,0 +1,32 @@
+DAY 29 OF 62 - Tuesday 29 Sep 2026
+
+PROFIT PER ITEM BOARD
+
+Profit Per Item Board — a real-world task using only today's concepts: looping over a dictionary, keys(), values(), items(), sum(), len(), comparisons, if / else, variables, and printing with 2-decimal money format. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A provisions seller in Rumuokoro wrote down the profit she makes per item in her notebook - one item, one figure. Today the notebook becomes a dictionary written inside the program, and the program must read the whole board and answer four questions.
+
+The program starts with this dictionary already written in the code:
+
+profits = {"rice": 350, "beans": 200, "yam": 275, "fish": 500, "oil": 425}
+
+The program must print:
+
+- One line per item, looping over the dictionary: RICE: N350.00 profit
+- The number of items, using len(): ITEMS ON BOARD: 5
+- The total profit if she sells one of everything: TOTAL: N1750.00 (use sum() over the values)
+- The best item - found by looping and comparing, not by guessing: BEST ITEM: fish at N500.00 profit
+- If two items tie on profit, the one that comes first in the dictionary wins.
+
+Sample run (for a board with just rice 350, beans 200, fish 500):
+
+RICE: N350.00 profit
+BEANS: N200.00 profit
+FISH: N500.00 profit
+ITEMS ON BOARD: 3
+TOTAL: N1050.00
+BEST ITEM: fish at N500.00 profit
+
+Edge cases to handle: a board where the FIRST item is the best (your loop must still catch it), a board where the LAST item is the best, two items with exactly the same profit, and an empty profits dictionary (ITEMS ON BOARD: 0, TOTAL: N0.00, and a sensible BEST ITEM line - it must not crash).

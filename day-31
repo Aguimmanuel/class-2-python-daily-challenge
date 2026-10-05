@@ -1,0 +1,30 @@
+DAY 31 OF 62 - Thursday 1 Oct 2026
+
+LOYALTY LEDGER
+
+Loyalty Ledger — a real-world task using only this week's concepts: creating a dictionary, updating values by key, get() for first-time keys, looping over a dictionary, items(), comparisons, if / else, split(), while validation, variables, input(), float(), and printing with 2-decimal money format. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A spare-parts shop in Mile 1 Diobu runs a loyalty book: every customer's purchases this month add up under their name. The book starts EMPTY, and the program builds it as sales come in.
+
+The program must:
+- Ask "How many sales today: " and keep asking until it is at least 1.
+- Read each sale as one line: name : amount (like ada:4500 - split it apart; extra spaces must not break it). Add the amount to that customer's running total - a customer's first sale today creates their entry (get() is your friend), later sales add to it.
+- After the last sale, print the book by looping: ADA: N12000.00 this month
+- Then print: TOP CUSTOMER: Ada at N12000.00 - ties go to the customer who reached the total first.
+- And the count of customers: CUSTOMERS: 3
+
+Sample run:
+
+How many sales today: 3
+Sale 1: ada:4500
+Sale 2: emeka: 2000
+Sale 3: ada: 7500
+
+ADA: N12000.00 this month
+EMEKA: N2000.00 this month
+TOP CUSTOMER: Ada at N12000.00
+CUSTOMERS: 2
+
+Edge cases to handle: the same customer three times (one merged total), a sale with spaces around the colon and the amount, a customer whose name is typed ada once and Ada another time (treat as DIFFERENT customers - exact names only), one sale only, and checking the top customer is right when the last sale pushes them past the leader.

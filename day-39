@@ -1,0 +1,32 @@
+DAY 39 OF 62 - Tuesday 13 Oct 2026
+
+DIESEL RUN CALCULATOR
+
+Diesel Run Calculator — a real-world task using only today's concepts: returning several values from one function (and unpacking them), def, parameters, return, calling functions, comparisons, if / else, while validation, variables, input(), float(), arithmetic, and printing with 2-decimal money format. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A haulage company in Trans Amadi runs two trucks. After every trip the dispatcher works out three figures per truck: what the diesel cost, how far each litre pushed the truck, and what each kilometre cost. One function must work out all three and RETURN them together.
+
+The function takes distance in km, litres used, and price per litre, and returns three values: total cost (litres x price), consumption (km per litre), cost per km (total cost / distance).
+
+The program must:
+- Ask for truck A's trip (distance, litres, price per litre - decimals allowed), call the function ONCE, unpack the three returns, and print:
+  TRUCK A - COST: N52000.00 | KM PER LITRE: 2.50 | PER KM: N520.00
+- Then the same for truck B.
+- End by comparing the two cost-per-km figures and printing one line: TRUCK B ran cheaper per km - with the cheaper truck's letter.
+- If the two work out exactly equal, print: BOTH trucks matched per km
+
+Sample run:
+
+Truck A distance (km): 100
+Truck A litres: 40
+Price per litre: 1300
+TRUCK A - COST: N52000.00 | KM PER LITRE: 2.50 | PER KM: N520.00
+Truck B distance (km): 150
+Truck B litres: 45
+Price per litre: 1300
+TRUCK B - COST: N58500.00 | KM PER LITRE: 3.33 | PER KM: N390.00
+TRUCK B ran cheaper per km
+
+Edge cases to handle: a trip where both trucks cost the same per km (the matched line), litres that don't divide the distance evenly (2.5km per litre and similar - your two-decimal format does the rounding for display), a very short trip of 1km, and the test of the day: ONE call per truck - if you call the function three times to get three values, you missed the point; return them together and unpack.

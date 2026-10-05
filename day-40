@@ -1,0 +1,35 @@
+DAY 40 OF 62 - Wednesday 14 Oct 2026
+
+BUILDING MATERIALS ESTIMATOR
+
+Building Materials Estimator — a real-world task using only today's concepts: importing and using the math module - math.sqrt() for square roots and math.ceil() for rounding UP - plus functions, parameters, return, while validation, comparisons, if / else, variables, input(), float(), arithmetic, and printing. No imports except math, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A young engineer quoting a small fence job in Port Harcourt needs three figures for any rectangular plot: the corner-to-corner diagonal, how many fence posts the perimeter needs when posts stand every 3 metres, and how many trips the materials tipper makes when it carries 7 cubic metres at a time. The catch: you cannot buy a third of a post or make half a trip - everything rounds UP, and that is exactly what math.ceil() is for.
+
+The program must:
+- Import math and use math.sqrt() and math.ceil() - both must appear.
+- Ask for the plot width and length in metres (decimals allowed, at least 1).
+- Diagonal = square root of (width squared + length squared). Perimeter = 2 x (width + length).
+- A volume of waste soil is also given in cubic metres; trips = volume rounded UP to whole tipper loads of 7.
+- Print:
+  PLOT: 30.0m x 20.0m
+  DIAGONAL: 36.06m
+  PERIMETER: 100.0m
+  POSTS NEEDED: 34
+  TIPPER TRIPS: 5
+
+Sample run:
+
+Plot width (m): 30
+Plot length (m): 20
+Waste soil (cubic metres): 30
+
+PLOT: 30.0m x 20.0m
+DIAGONAL: 36.06m
+PERIMETER: 100.0m
+POSTS NEEDED: 34
+TIPPER TRIPS: 5
+
+Edge cases to handle: a perimeter that divides evenly by 3 (like 30m - exactly 10 posts, and ceil must NOT add one), volume exactly 7 (one trip), volume of 1 (still one trip - never zero), a square plot (width equals length), and decimals everywhere - checking the diagonal really is the square root, not a guess.

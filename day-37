@@ -1,0 +1,33 @@
+DAY 37 OF 62 - Friday 9 Oct 2026
+
+SITE WORKER PAY DESK
+
+Site Worker Pay Desk — a real-world task using this week's concepts: functions throughout - def, parameters, return, calling, breaking the program into small jobs - plus looping, counting with variables, comparisons, if / elif / else, while validation, variables, input(), int(), float(), arithmetic, and printing with 2-decimal money format. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A building site foreman pays his workers daily and closes the week on Friday evening. The pay desk program must be written as small functions - the main part should read like a table of contents, one line per job.
+
+The program must:
+- Ask "How many workers: " (at least 1), then for each worker ask the name, days worked (0 to 7), and daily rate (decimals allowed).
+- One function takes days and rate and RETURNS the pay (days x rate).
+- One function takes the pay and RETURNS the bracket: WEEK WARRIOR (pay of 30000 or more), SOLID (15000 up to but not including 30000), TRY AGAIN (below 15000).
+- The main part prints one line per worker: Adaeze - N45000.00 - WEEK WARRIOR
+- After all workers: WAGE BILL: N77500.00, WARRIORS: 1
+- Ties do not matter today, but every function must return - none of them prints its own answer.
+
+Sample run:
+
+How many workers: 2
+Worker 1 name: Adaeze
+Days worked: 5
+Daily rate: 9000
+Adaeze - N45000.00 - WEEK WARRIOR
+Worker 2 name: Saka
+Days worked: 3
+Daily rate: 6500
+Saka - N19500.00 - SOLID
+WAGE BILL: N64500.00
+WARRIORS: 1
+
+Edge cases to handle: a worker with 0 days (N0.00 - TRY AGAIN, and they still count on the bill), pay of exactly 30000 (WEEK WARRIOR - not SOLID), pay of exactly 15000 (SOLID - not TRY AGAIN), a decimal rate like 6500.50, and the test of the day: the printing of each worker's line happens in the main part, built from the two return values.

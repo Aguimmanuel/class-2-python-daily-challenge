@@ -1,0 +1,31 @@
+DAY 35 OF 62 - Wednesday 7 Oct 2026
+
+FREIGHT QUOTER
+
+Freight Quoter — a real-world task using only today's concepts: functions that RETURN a value (return, not print), calling a function and using what it returns, parameters, while validation, comparisons, if / else, variables, input(), int(), arithmetic, and printing with 2-decimal money format. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A dispatch rider runs a small freight desk: quotes for deliveries, then totals the day's quotes. The pricing rule is fixed, so it lives in ONE function - and the function must RETURN the price, not print it. The main part of the program does all the printing and uses the returned numbers.
+
+The pricing rule: N5000.00 base for any distance up to and including 20km; above 20km, N5000.00 plus N200 for every kilometre beyond 20 (a 25km run costs 5000 + 5 x 200 = N6000.00).
+
+The program must:
+- Ask "How many quotes today: " (at least 1).
+- For each quote, ask the distance in whole kilometres, call the function, and print: 25km run - N6000.00
+- Keep a running total of the returned prices.
+- After the last quote: TOTAL QUOTED: N16500.00
+- The program must still work if the function is called for the SAME distance twice - call it again, do not copy the number.
+
+Sample run:
+
+How many quotes today: 3
+Distance for quote 1 (km): 15
+15km run - N5000.00
+Distance for quote 2 (km): 25
+25km run - N6000.00
+Distance for quote 3 (km): 30
+30km run - N7000.00
+TOTAL QUOTED: N18000.00
+
+Edge cases to handle: exactly 20km (base price - no extra), exactly 21km (base plus one step), a quote of 1km, two quotes at the same distance (the function is called twice and returns the same price), and - the test of the day - your function must contain return and no print; if you can't build TOTAL QUOTED from its return values, it's not returning yet.

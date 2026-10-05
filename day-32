@@ -1,0 +1,35 @@
+DAY 32 OF 62 - Friday 2 Oct 2026
+
+PHARMACY STOCK ALERT
+
+Pharmacy Stock Alert — a real-world task using this week's concepts: dictionaries from start to finish - reading, updating, get(), looping, counting - plus split(), comparisons, if / elif / else, while validation, variables, input(), int(), and printing. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A pharmacy on Woji Road closes its counter each evening and checks what is running out. The stock book is a dictionary written in the program:
+
+stock = {"paracetamol": 40, "malaria tabs": 8, "cough syrup": 15, "vitamins": 3, "bandages": 25}
+
+The program must:
+- Ask "How many movements today: " (at least 1), then read each movement as one line, two kinds only:
+  sell malaria tabs 5  (reduce that item by the number)
+  restock vitamins 20  (increase that item by the number)
+- Selling more than the stock allows must be refused: "Not enough malaria tabs - only 8 left" - and nothing changes.
+- An item never seen before (sell ibuprofen 2) is refused with "Unknown item: ibuprofen".
+- After the movements, loop over the book and print every item: PARACETAMOL: 40 in stock - then flag every item below 10 on its own line: LOW STOCK: vitamins (3)
+- End with the count of low items: ORDER URGENTLY: 2 (if none: ORDER URGENTLY: 0)
+
+Sample run:
+
+How many movements today: 3
+Movement 1: sell malaria tabs 5
+Movement 2: restock vitamins 20
+Movement 3: sell vitamins 15
+
+MALARIA TABS: 3 in stock
+VITAMINS: 8 in stock
+LOW STOCK: malaria tabs (3)
+LOW STOCK: vitamins (8)
+ORDER URGENTLY: 2
+
+Edge cases to handle: selling exactly the full stock (allowed - it lands on 0 and shows as LOW), overselling by one (refused), an unknown item, a restock of an unknown item (also refused), a movement line with extra spaces, and a day where nothing ends up low (ORDER URGENTLY: 0).

@@ -1,0 +1,32 @@
+DAY 36 OF 62 - Thursday 8 Oct 2026
+
+LOAN DESK, IN FUNCTIONS
+
+Loan Desk, In Functions — a real-world task using only today's and earlier concepts: breaking a program into small functions, def, parameters, return (including True / False), calling functions, the Day 4 bank rules, and / or / not, comparisons, if / elif / else, while validation, variables, input(), float(), and printing. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+The microfinance bank from Day 4 is happy with the eligibility program - but the manager complains the whole logic is one long tangled ladder. Rebuild it: same rules as Day 4, but now broken into small functions, each doing ONE job.
+
+The bank's rules, unchanged:
+- Age must be between 21 and 55 (both included).
+- No unpaid loan with this bank.
+- Monthly income at least 80000, OR a civil-servant guarantor can cover the income rule. The guarantor covers ONLY income.
+
+The program must be built with AT LEAST these three functions (names are yours):
+- one that takes the age and RETURNS True or False - is the age valid?
+- one that takes the income and the guarantor answer and RETURNS True or False - is the income rule satisfied?
+- one that takes the three answers and PRINTS the full decision line (APPROVED or DECLINED - with the reason), calling the other functions to decide.
+
+The main part of the program only asks the four questions (age, income, unpaid loan yes/no, guarantor yes/no) and hands them to the decision function.
+
+Sample run (same as Day 4):
+
+Age: 27
+Monthly income: 55000
+Unpaid loan with the bank (yes/no): no
+Civil-servant guarantor (yes/no): yes
+
+DECISION: APPROVED - guarantor covered the income rule
+
+Edge cases to handle: the full Day 4 set must still pass - age exactly 21 and 55 (approved), age 20 WITH a guarantor (declined - the guarantor covers only income), income exactly 80000 (approved on income), income 79999 with no guarantor (declined), an unpaid loan WITH a guarantor (declined). And the test of the day: each function does one job, returns its answer, and the printing happens in one place only.

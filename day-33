@@ -1,0 +1,40 @@
+DAY 33 OF 62 - Monday 5 Oct 2026
+
+RAFFLE DRAW CHECKER
+
+Raffle Draw Checker — a real-world task using only today's concepts: tuples (creating one, looping over it, checking in - and why it must never change), sets (creating one to remove duplicates, len(), in), for loops, counting with variables, comparisons, if / elif / else, while validation, variables, input(), int(), and printing. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A social club in GRA runs a Friday raffle. The five winning numbers were drawn on Friday and written on paper - they are FINAL, so in the program they live in a TUPLE, never a list:
+
+winning = (5, 12, 23, 34, 45)
+
+Players pick six numbers. The program checks one player's slip.
+
+The program must:
+- Ask for the player's name.
+- Ask for six picks, one at a time. The picks go into a SET - the club knows players sometimes repeat themselves, and the set silently kills duplicates.
+- Print: Chidi played 4 unique numbers (2 duplicates dropped)
+- Then count the matches: loop over the winning tuple and, for each winning number, check whether it is in the player's set.
+- Verdict, exactly one line:
+  0 or 1 match: BETTER LUCK NEXT FRIDAY, Chidi
+  2 or 3 matches: SMALL WIN - collect N2000, Chidi
+  4 matches: BIG WIN - collect N50000, Chidi
+  all 5 matched: JACKPOT - N1000000, Chidi
+
+Sample run:
+
+Player name: Chidi
+Pick 1: 5
+Pick 2: 5
+Pick 3: 23
+Pick 4: 40
+Pick 5: 45
+Pick 6: 12
+
+Chidi played 4 unique numbers (2 duplicates dropped)
+Chidi matched 3 numbers
+SMALL WIN - collect N2000, Chidi
+
+Edge cases to handle: all six picks the same number (one unique number, no crash), a pick that is not in the tuple at all (that is normal - it just never matches), exactly 4 matches, exactly 5 matches (jackpot - possible only if no duplicates were played... think about WHY, and what your program reports if duplicates made 5 matches impossible), and a player named with two words.

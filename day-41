@@ -1,0 +1,36 @@
+DAY 41 OF 62 - Thursday 15 Oct 2026
+
+FRIDAY LUCKY DRAW
+
+Friday Lucky Draw — a real-world task using only today's concepts: importing and using the random module - random.choice() to pick from a list and random.randint() for a whole number in a range - plus lists, append(), looping, while validation, functions, comparisons, if / else, variables, input(), and printing. No imports except random, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A supermarket in GRA runs a Friday lucky draw: every shopper of the hour goes into a list, and at the end of the hour the program picks one lucky shopper and their discount - completely at random, no favourites.
+
+The program must:
+- Import random and use random.choice() AND random.randint() - both must appear.
+- Ask "How many shoppers this hour: " (at least 2), then collect that many names into a list.
+- Pick the lucky shopper with random.choice().
+- Roll their discount with random.randint() - a whole number from 5 to 50 percent.
+- Then roll a bonus token with random.randint() from 1 to 3: token 1 adds N2000 cash, token 2 adds nothing, token 3 doubles the discount percent.
+- Print:
+  LUCKY SHOPPER: Ada
+  BASE DISCOUNT: 30%
+  BONUS TOKEN: 3 - discount doubled to 60%
+  ADA SHOPS TODAY AT 60% OFF + N0 CASH
+- The last line must be built from the actual rolls - every part changes when the rolls change.
+
+Sample run:
+
+How many shoppers this hour: 3
+Shopper 1: Ada
+Shopper 2: Emeka
+Shopper 3: Fatima
+
+LUCKY SHOPPER: Fatima
+BASE DISCOUNT: 12%
+BONUS TOKEN: 1 - N2000 cash added
+FATIMA SHOPS TODAY AT 12% OFF + N2000 CASH
+
+Edge cases to handle: token 2 (no bonus at all - the last line must still print cleanly), the smallest and largest possible rolls (5% and 50%, token 1 and token 3), a list of exactly 2 shoppers, running the program twice and getting different results (that is the POINT - if both runs match, random is not doing its job), and a name with two words.

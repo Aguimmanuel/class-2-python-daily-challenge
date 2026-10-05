@@ -1,0 +1,31 @@
+DAY 28 OF 62 - Monday 28 Sep 2026
+
+PUMP PRICE BOARD
+
+Pump Price Board — a real-world task using only today's concepts: creating a dictionary, reading a value by key, updating a value, adding a new key, get() for missing keys, comparisons, if / elif / else, variables, input(), float(), and printing with 2-decimal money format. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A filling station on East-West Road keeps its pump prices on a small board. Each pump has a letter, and the manager wants a program that answers questions about prices without reading the whole board.
+
+The program starts with three pumps already set: A sells at 1100, C at 1115, D at 1090 per litre. Then it must:
+
+- Ask "Which pump: " and print its price: Pump A sells at N1100.00 per litre. If the pump is not on the board (like B), use get() to print: No pump B on this board - without crashing.
+- Ask "Which pump is changing: " and its new price, then update that pump and print the updated line for it.
+- A new pump has just been installed: ask its letter and price, add it to the board, and print its line.
+- End by printing any three pumps the manager asks for, one line each, using the same sentence as the first lookup (missing pumps still get the No pump message).
+
+Sample run:
+
+Which pump: A
+Pump A sells at N1100.00 per litre
+Which pump is changing: D
+New price for D: 1150
+Pump D sells at N1150.00 per litre
+New pump letter: B
+Price for B: 1105
+Pump B sells at N1105.00 per litre
+Final check - pump 1: D
+Pump D sells at N1150.00 per litre
+
+Edge cases to handle: looking up a pump that was never added (message, no crash), a new price with decimals like 1105.50, adding a pump with the same letter as an existing one (it replaces the old price - that is an update, not a crash), and checking get() is what saves you from the missing-key crash.

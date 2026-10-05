@@ -1,0 +1,39 @@
+DAY 38 OF 62 - Monday 12 Oct 2026
+
+PRINT SHOP ORDERER
+
+Print Shop Orderer — a real-world task using only today's concepts: default parameter values, calling the same function with different numbers of arguments, def, parameters, return, dictionaries, comparisons, if / else, variables, input(), int(), arithmetic, and printing with 2-decimal money format. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A print shop on Ojoto Avenue takes phone orders: sometimes the caller orders just one item, sometimes copies, sometimes rush delivery too. The shop wants ONE quote function where copies and rush are OPTIONAL - left out means 1 copy, no rush. That is today's idea: default parameter values.
+
+The price list is a dictionary written in the program:
+
+prices = {"flyer": 50, "banner": 5000, "card": 2500}
+
+The function takes the item, then copies (default 1), then rush (default "no"). The price is the item price times the copies, plus 25% of that total if rush is "yes". It RETURNS the price.
+
+The program must:
+- Ask for three orders, each as a line: item, then copies (or enter to skip), then rush (or enter to skip). An empty answer means "use the default" - and the function call must reflect that: call it with fewer arguments when answers are skipped.
+- Print each quote: 200 flyers, rush - N12500.00
+- After the three: TOTAL QUOTED: N... (sum of the returned prices)
+- An item not in the price list is refused: "We don't print mugs" - and doesn't count.
+
+Sample run:
+
+Order 1 item: flyer
+Order 1 copies: 200
+Order 1 rush (yes/no): yes
+200 flyers, rush - N12500.00
+Order 2 item: banner
+Order 2 copies:
+Order 2 rush:
+1 banner, standard - N5000.00
+Order 3 item: card
+Order 3 copies: 2
+Order 3 rush:
+2 cards, standard - N5000.00
+TOTAL QUOTED: N22500.00
+
+Edge cases to handle: all three defaults in play (one item, no copies, no rush), rush on a big order (25% bites), rush left out everywhere, an unknown item in the middle (refused, other orders still quoted), and the test of the day: the SAME function is called three different ways - with 1, 2 and 3 arguments.

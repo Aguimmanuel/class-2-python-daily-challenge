@@ -1,0 +1,41 @@
+DAY 34 OF 62 - Tuesday 6 Oct 2026
+
+STAFF ID CARD DESK
+
+Staff Id Card Desk — a real-world task using only today's concepts: defining a function with def, parameters, calling a function, writing it once and reusing it, upper(), while validation, comparisons, if / else, variables, input(), and printing. No imports, no tricks.
+
+Solve it individually, then come together as a group to compare approaches. Good luck!
+
+A new guest house on Stadium Road prints staff ID cards every time it hires. The manager wants a program where the card is printed by ONE function - written once, then called for every new staff member. Typing the card lines three times by hand is exactly what functions exist to end.
+
+The program must:
+- Contain a function that takes a name and a department and prints the card:
+  ----- STAFF CARD -----
+  NAME: ADAEZE OBI
+  DEPT: ACCOUNTS
+  VALID: 2026/27
+  ----------------------
+  (name and department in ALL CAPS; VALID is always 2026/27)
+- Ask "How many new staff: " (at least 1), then for each one ask the name and department, and print the card by CALLING the function - the card lines appear nowhere else in the program.
+- After the last card: NEW STAFF PRINTED: 3
+
+Sample run:
+
+How many new staff: 2
+Staff 1 name: Adaeze Obi
+Staff 1 department: Accounts
+----- STAFF CARD -----
+NAME: ADAEZE OBI
+DEPT: ACCOUNTS
+VALID: 2026/27
+----------------------
+Staff 2 name: Emeka Woke
+Staff 2 department: Security
+----- STAFF CARD -----
+NAME: EMEKA WOKE
+DEPT: SECURITY
+VALID: 2026/27
+----------------------
+NEW STAFF PRINTED: 2
+
+Edge cases to handle: one staff member only, a department typed with lowercase (card shows caps), a two-word department like Front Desk, and - the real test of the day - a friend reading your code should find the card printed in exactly ONE place, with the function called once per staff member.
